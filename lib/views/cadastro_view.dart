@@ -1,5 +1,6 @@
 // ignore_for_file: sort_child_properties_last, prefer_const_constructors
 
+import 'package:app_maromba/Screens/HomePage/HomePage.dart';
 import 'package:app_maromba/Screens/LoginAndRegister/LoginForm.dart';
 import 'package:app_maromba/models_views/cadastro_store.dart';
 import 'package:flutter/material.dart';
@@ -195,6 +196,8 @@ class _CadastroPageState extends State<CadastroPage> {
                         senhaController.text
                         );
                       cadastroStore.cadastrarUsuario(usuario);
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (_) => HomePage()));
                     }
                   ),
                   decoration: BoxDecoration(
