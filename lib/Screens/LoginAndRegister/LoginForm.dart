@@ -1,5 +1,5 @@
 import 'package:app_maromba/Screens/HomePage/HomePage.dart';
-import 'package:app_maromba/Screens/LoginAndRegister/SignupForm.dart';
+import 'package:app_maromba/views/cadastro_view.dart';
 import 'package:flutter/material.dart';
 
 class LoginForm extends StatefulWidget {
@@ -115,7 +115,7 @@ class _LoginFormState extends State<LoginForm> {
                         child: Text('Criar conta!', style: TextStyle( color: Colors.purple),),
                         onPressed: (){
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (_) => SignupForm()));
+                              MaterialPageRoute(builder: (_) => CadastroPage()));
                         },
                       )
                     ],

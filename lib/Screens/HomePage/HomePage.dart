@@ -1,6 +1,6 @@
 import 'package:app_maromba/Screens/LoginAndRegister/EditProfileForm.dart';
 import 'package:app_maromba/Screens/HomePage/AvFisica.dart';
-import 'package:app_maromba/views/DietList.dart';
+import 'package:app_maromba/views/dieta_view.dart';
 import 'package:app_maromba/Screens/HomePage/TrainingList.dart';
 import 'package:flutter/material.dart';
 import 'package:app_maromba/Screens/LoginAndRegister/ChangePasswordForm.dart';
@@ -209,7 +209,7 @@ class MyMenu_3 extends StatelessWidget {
       child: InkWell(
         onTap: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => Dietlist()));
+              context, MaterialPageRoute(builder: (context) => DietaPage()));
         },
         splashColor: Colors.purple,
         child: Center(

@@ -25,6 +25,30 @@ mixin _$DietaStore on _DietaStore, Store {
     });
   }
 
+  late final _$obsFutureAtom =
+      Atom(name: '_DietaStore.obsFuture', context: context);
+
+  @override
+  ObservableFuture<List<Dieta>> get obsFuture {
+    _$obsFutureAtom.reportRead();
+    return super.obsFuture;
+  }
+
+  @override
+  set obsFuture(ObservableFuture<List<Dieta>> value) {
+    _$obsFutureAtom.reportWrite(value, super.obsFuture, () {
+      super.obsFuture = value;
+    });
+  }
+
+  late final _$carregandoDietaAsyncAction =
+      AsyncAction('_DietaStore.carregandoDieta', context: context);
+
+  @override
+  Future<void> carregandoDieta() {
+    return _$carregandoDietaAsyncAction.run(() => super.carregandoDieta());
+  }
+
   late final _$salvarDietaAsyncAction =
       AsyncAction('_DietaStore.salvarDieta', context: context);
 
@@ -33,10 +57,19 @@ mixin _$DietaStore on _DietaStore, Store {
     return _$salvarDietaAsyncAction.run(() => super.salvarDieta(comida));
   }
 
+  late final _$excluirDietaAsyncAction =
+      AsyncAction('_DietaStore.excluirDieta', context: context);
+
+  @override
+  Future<void> excluirDieta(Dieta dieta) {
+    return _$excluirDietaAsyncAction.run(() => super.excluirDieta(dieta));
+  }
+
   @override
   String toString() {
     return '''
-listDeComida: ${listDeComida}
+listDeComida: ${listDeComida},
+obsFuture: ${obsFuture}
     ''';
   }
 }

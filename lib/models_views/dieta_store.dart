@@ -1,7 +1,6 @@
-import 'package:app_maromba/repositories/dieta_repositories.dart';
+import 'package:app_maromba/repositories/dieta_repository.dart';
 import 'package:flutter/foundation.dart';
 import 'package:mobx/mobx.dart';
-
 import '../models/dieta.dart';
 
 part 'dieta_store.g.dart';
@@ -9,10 +8,12 @@ part 'dieta_store.g.dart';
 class DietaStore = _DietaStore with _$DietaStore;
 
 abstract class _DietaStore with Store {
+
   _DietaStore(){
     carregandoDieta();
   }
-  DietaRepository repository = DietaRepository();
+
+  DietaRepository repositoryDieta = DietaRepository();
 
   @observable
   ObservableList<Dieta> listDeComida = ObservableList();
@@ -27,14 +28,14 @@ abstract class _DietaStore with Store {
 
   @action
   Future<void> carregandoDieta()async{
-    final futureList = repository.listDeComida();
+    final futureList = repositoryDieta.listDeComida();
     obsFuture = ObservableFuture(futureList);
     final comidas = await futureList;
     listDeComida.addAll(comidas);
-  }
+    }
   @action
   Future<void> salvarDieta(String comida) async {
-    final dieta = await repository.salvarDieta(Dieta(comida));
+    final dieta = await repositoryDieta.salvarDieta(Dieta(comida));
     if(dieta != null){
       listDeComida.add(dieta);
     }
@@ -42,7 +43,7 @@ abstract class _DietaStore with Store {
 
   @action
   Future<void> excluirDieta(Dieta dieta) async{
-    final dietaExcluida = await repository.excluirDieta(dieta);
+    final dietaExcluida = await repositoryDieta.excluirDieta(dieta);
     if(dietaExcluida){
       listDeComida.removeWhere((element) => element == dieta);
     }
