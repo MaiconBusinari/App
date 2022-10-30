@@ -7,6 +7,7 @@ class Abdomen extends StatefulWidget {
   State<Abdomen> createState() => _AbdomenState();
 }
 
+//FUNCIONA IGUAL A CLASSE BRACO
 class _AbdomenState extends State<Abdomen> {
 
   Widget buildSingleCheckbox(CheckBoxState checkbox) =>  CheckboxListTile(

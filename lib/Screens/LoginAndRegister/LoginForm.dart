@@ -13,14 +13,17 @@ class _LoginFormState extends State<LoginForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //BARRA DE NAVEGACAO LOGIN
       appBar: AppBar(title: Text('App Maromba'),
       ),
+      //CORPO LOGIN
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
+              //TITULO E IMAGEM TELA LOGIN
               children: [
                 SizedBox(height: 30.0),
                 Text('Login', style: TextStyle(
@@ -34,6 +37,7 @@ class _LoginFormState extends State<LoginForm> {
                   width: 170.0,
                 ),
 
+                //CONTEINER PARA FORMULARIO LOGIN -> CPF
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 20.0),
                   margin: EdgeInsets.only(top: 20.0),
@@ -55,6 +59,8 @@ class _LoginFormState extends State<LoginForm> {
                     ),
                   ),
                 ),
+
+                //CONTAINER PARA FORMULARIO LOGIN -> SENHA
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 20.0),
                   margin: EdgeInsets.only(top: 20.0),
@@ -76,11 +82,12 @@ class _LoginFormState extends State<LoginForm> {
                     ),
                   ),
                 ),
+
+                //CONTAINER COM BOTAO DE LOGAR
                 Container(
                   margin: EdgeInsets.all(30.0),
 
                   width: double.infinity,
-                  //TROCADA  FlatButton -> TextButton
                   child: TextButton(
                     child: Text(
                       'Login',
@@ -98,14 +105,13 @@ class _LoginFormState extends State<LoginForm> {
                   ),
                 ),
 
+                //CONTAINER COM BOTAO DE CRIAR CONTA
                 Container(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text('Não tem uma conta?'),
-                    //TROCADA  FlatButton -> TextButton
                       TextButton(
-                        //textColor: Colors.purple,
                         child: Text('Criar conta!', style: TextStyle( color: Colors.purple),),
                         onPressed: (){
                           Navigator.push(context,

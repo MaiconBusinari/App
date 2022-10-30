@@ -7,6 +7,7 @@ class Aerobico extends StatefulWidget {
   State<Aerobico> createState() => _AerobicoState();
 }
 
+//FUNCIONA IGUAL A CLASSE BRACO
 class _AerobicoState extends State<Aerobico> {
 
   Widget buildSingleCheckbox(CheckBoxState checkbox) =>  CheckboxListTile(

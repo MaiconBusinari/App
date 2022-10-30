@@ -15,6 +15,7 @@ class TrainingList extends StatefulWidget {
 class _TrainingListState extends State<TrainingList> {
   DateTime _dateTime = DateTime.now();
 
+  //CALENDARIO
   void _Calendario() {
     showDatePicker(
       context: context,
@@ -31,19 +32,23 @@ class _TrainingListState extends State<TrainingList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //BARRA DE NAVEGACAO TREINOS
       appBar: AppBar(
         title: Text('Treinos'),
         actions: [
+          //BOTAO PARA ABRIR CALENDARIO NA BARRA DE NAVEGACAO
           IconButton(
             icon: Icon(Icons.calendar_month),
             onPressed: _Calendario,
           ),
         ],
       ),
+      //CORPO TREINOS
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(top: 10),
           child: Column(
+            //TITULO TREINOS
             children: [
               Text(
                 "Dia :",
@@ -63,7 +68,9 @@ class _TrainingListState extends State<TrainingList> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(35)),
                   child: Column(
+                    
                     children: [
+                      //IMAGEM PARA ENTRAR NA TELA DE BICEPS E TRICEPS
                       Stack(alignment: Alignment.center, children: [
                         Ink.image(
                           image: AssetImage('assets/images/treinobraço.png'),
@@ -92,6 +99,7 @@ class _TrainingListState extends State<TrainingList> {
                           ),
                         )
                       ]),
+                      //IMAGEM PARA ENTRAR NA TELA DE PEITORAL
                       Padding(
                         padding: const EdgeInsets.only(top: 8),
                         child: Stack(alignment: Alignment.center, children: [
@@ -125,6 +133,7 @@ class _TrainingListState extends State<TrainingList> {
                           )
                         ]),
                       ),
+                      //IMAGEM PARA ENTRAR NA TELA DE AEROBICOS
                       Padding(
                         padding: EdgeInsets.only(top: 8),
                         child: Stack(alignment: Alignment.center, children: [
@@ -158,6 +167,7 @@ class _TrainingListState extends State<TrainingList> {
                           )
                         ]),
                       ),
+                      //IMAGEM PARA ENTRAR NA TELA DE ABDOMEN
                       Padding(
                         padding: EdgeInsets.only(top: 8),
                         child: Stack(alignment: Alignment.center, children: [
@@ -189,6 +199,7 @@ class _TrainingListState extends State<TrainingList> {
                           )
                         ]),
                       ),
+                      //IMAGEM PARA ENTRAR NA TELA DE COSTAS E OMBRO
                       Padding(
                         padding: EdgeInsets.only(top: 8),
                         child: Stack(alignment: Alignment.center, children: [

@@ -7,6 +7,7 @@ class Peitoral extends StatefulWidget {
   State<Peitoral> createState() => _PeitoralState();
 }
 
+//FUNCIONA IGUAL A CLASSE BRACO
 class _PeitoralState extends State<Peitoral> {
 
   Widget buildSingleCheckbox(CheckBoxState checkbox) =>  CheckboxListTile(

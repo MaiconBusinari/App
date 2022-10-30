@@ -10,13 +10,16 @@ class _EditProfileFormState extends State<EditProfileForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //BARRA DE NAVEGACAO DE EDITAR PERFIL
       appBar: AppBar(
         title: Text('Editar Perfil'),
       ),
+      //CORPO EDITAR PERFIL
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
           child: Center(
+            //TITULO TELA EDITAR PERFIL
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -28,6 +31,7 @@ class _EditProfileFormState extends State<EditProfileForm> {
                       color: Colors.purpleAccent,
                       fontSize: 25.0),
                 ),
+                //CONTAINER PARA FORMULARIO EDITAR PERFIL -> NOME
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 20.0),
                   margin: EdgeInsets.only(top: 20.0),
@@ -47,6 +51,7 @@ class _EditProfileFormState extends State<EditProfileForm> {
                     ),
                   ),
                 ),
+                //CONTAINER PARA FORMULARIO EDITAR PERFIL -> IDADE
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 20.0),
                   margin: EdgeInsets.only(top: 10.0),
@@ -67,6 +72,7 @@ class _EditProfileFormState extends State<EditProfileForm> {
                     ),
                   ),
                 ),
+                //CONTAINER PARA FORMULARIO EDITAR PERFIL -> ALTURA
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 20.0),
                   margin: EdgeInsets.only(top: 10.0),
@@ -87,6 +93,7 @@ class _EditProfileFormState extends State<EditProfileForm> {
                     ),
                   ),
                 ),
+                //CONTAINER PARA FORMULARIO EDITAR PERFIL -> PESO
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 20.0),
                   margin: EdgeInsets.only(top: 10.0),
@@ -107,6 +114,7 @@ class _EditProfileFormState extends State<EditProfileForm> {
                     ),
                   ),
                 ),
+                //CONTAINER PARA FORMULARIO EDITAR PERFIL -> META
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 20.0),
                   margin: EdgeInsets.only(top: 10.0),
@@ -127,10 +135,10 @@ class _EditProfileFormState extends State<EditProfileForm> {
                     ),
                   ),
                 ),
+                //CONTAINER COM BOTAO DE SALVAR 
                 Container(
                   margin: EdgeInsets.all(30.0),
                   width: double.infinity,
-                  //TROCADA  FlatButton -> TextButton
                   child: TextButton(
                     child: Text(
                       'Salvar',

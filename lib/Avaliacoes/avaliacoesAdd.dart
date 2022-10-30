@@ -3,13 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class avaliacaoAdd extends StatefulWidget {
+
+  //TIRAR DUVIDA------------------------------------------
   final Function(Avaliacoes) addAvaliacao;
 
   avaliacaoAdd(this.addAvaliacao);
 
   @override
   State<avaliacaoAdd> createState() => _avaliacaoAddState();
+  //TIRAR DUVIDA------------------------------------------
+  
 }
+
+var pesoController = TextEditingController();
 
 class _avaliacaoAddState extends State<avaliacaoAdd> {
   String dataString = "";
@@ -17,25 +23,23 @@ class _avaliacaoAddState extends State<avaliacaoAdd> {
   String escolhaData = "Escolha uma data:";
   @override
   Widget build(BuildContext context) {
-    Widget buildTextField(String hint, TextEditingController controller) {
+    //CONTAINER FORMULARIO DE PESO
+    Widget buildTextField(String peso, TextEditingController pesoController) {
       return Container(
         margin: EdgeInsets.all(4),
         child: TextField(
           decoration: InputDecoration(
-            labelText: hint,
+            labelText: peso,
             border: OutlineInputBorder(
               borderSide: BorderSide(
-                color: Colors.purpleAccent,
+                color: Color.fromARGB(255, 64, 114, 251),
               ),
             ),
           ),
-          controller: controller,
+          controller: pesoController,
         ),
       );
     }
-
-    var dataController = TextEditingController();
-    var pesoController = TextEditingController();
 
     return Container(
       padding: EdgeInsets.all(8),
@@ -44,6 +48,7 @@ class _avaliacaoAddState extends State<avaliacaoAdd> {
       child: SingleChildScrollView(
         child: Column(
           children: [
+            //TITULO TELA ADICIOAR AVALIACAO
             Text(
               'Adicionar Avaliação',
               style: TextStyle(
@@ -57,6 +62,7 @@ class _avaliacaoAddState extends State<avaliacaoAdd> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   (Text(escolhaData)),
+                  //CONTAINER COM BOTAO DE CALENDARIO
                   IconButton(
                       icon: Icon(Icons.calendar_month_outlined),
                       onPressed: () async {
@@ -86,21 +92,24 @@ class _avaliacaoAddState extends State<avaliacaoAdd> {
                           escolhaData = "";
                         });
                       }),
-                      Text(dataEscolhida + dataString)
+                  //DATA SALVA EM UMA VARIAVEL
+                  Text(dataEscolhida + dataString)
                 ],
               ),
             ),
-            //buildTextField('Data', dataController),
+            //CONTAINER QUE CRIA FORMULARIO DE PESO
             buildTextField('Peso', pesoController),
 
+            //BOTAO ADICIONAR AVALIACAO
             ElevatedButton(
+                child: Text('Adicionar Avaliação'),
                 onPressed: () {
                   final avaliacao = Avaliacoes(dataString, pesoController.text);
 
+                  //PASSA CHAMA FUNCAO DE ADICIONAR AVALIACAO E PASSA UMA AVALISAO COMO PARAMETRO
                   widget.addAvaliacao(avaliacao);
                   Navigator.of(context).pop();
-                },
-                child: Text('Adicionar Avaliação'))
+                },)
           ],
         ),
       ),

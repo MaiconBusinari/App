@@ -11,14 +11,17 @@ class _SignupFormState extends State<SignupForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //BARRA DE NAVEGACAO CADASTRO
       appBar: AppBar(title: Text('Cadastro'),
       ),
+      //CORPO CADASTRO
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
+              //TITULO DA TELA DE CADASTRO
               children: [
                 SizedBox(height: 10.0),
                 Text('Informe os dados', style: TextStyle(
@@ -26,6 +29,7 @@ class _SignupFormState extends State<SignupForm> {
                     color: Colors.purpleAccent,
                     fontSize: 25.0),
                 ),
+                //CONATINER FORMULARIO CADASTRO -> NOME
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 20.0),
                   margin: EdgeInsets.only(top: 20.0),
@@ -45,6 +49,7 @@ class _SignupFormState extends State<SignupForm> {
                     ),
                   ),
                 ),
+                //CONATINER FORMULARIO CADASTRO -> CPF
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 20.0),
                   margin: EdgeInsets.only(top: 10.0),
@@ -65,6 +70,7 @@ class _SignupFormState extends State<SignupForm> {
                     ),
                   ),
                 ),
+                //CONATINER FORMULARIO CADASTRO -> ALTURA
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 20.0),
                   margin: EdgeInsets.only(top: 10.0),
@@ -85,6 +91,7 @@ class _SignupFormState extends State<SignupForm> {
                     ),
                   ),
                 ),
+                //CONATINER FORMULARIO CADASTRO -> PESO
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 20.0),
                   margin: EdgeInsets.only(top: 10.0),
@@ -105,6 +112,7 @@ class _SignupFormState extends State<SignupForm> {
                     ),
                   ),
                 ),
+                //CONATINER FORMULARIO CADASTRO -> IDADE
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 20.0),
                   margin: EdgeInsets.only(top: 10.0),
@@ -125,6 +133,7 @@ class _SignupFormState extends State<SignupForm> {
                     ),
                   ),
                 ),
+                //CONATINER FORMULARIO CADASTRO -> SENHA
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 20.0),
                   margin: EdgeInsets.only(top: 10.0),
@@ -145,15 +154,16 @@ class _SignupFormState extends State<SignupForm> {
                     ),
                   ),
                 ),
+                //BOTAO CADASTAR
                 Container(
                   margin: EdgeInsets.all(30.0),
                   width: double.infinity,
-                  //TROCADA  FlatButton -> TextButton
                   child: TextButton(
                     child: Text(
                       'Cadastrar',
                       style: TextStyle(color: Colors.black),
                     ),
+                    //NAO REALIZA NADA QUANDO O BOTAO É CLICADO
                     onPressed: (){ },
                   ),
                   decoration: BoxDecoration(
@@ -162,7 +172,7 @@ class _SignupFormState extends State<SignupForm> {
 
                   ),
                 ),
-
+                //CONTAINER COM BOTAO PARA VOLTAR A TELA DE LOGIN
                 Container(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,

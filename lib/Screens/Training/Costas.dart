@@ -7,6 +7,7 @@ class Costas extends StatefulWidget {
   State<Costas> createState() => _CostasState();
 }
 
+//FUNCIONA IGUAL A CLASSE BRACO
 class _CostasState extends State<Costas> {
 
   Widget buildSingleCheckbox(CheckBoxState checkbox) =>  CheckboxListTile(
