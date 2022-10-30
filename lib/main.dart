@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_declarations, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 
 import 'Screens/LoginAndRegister/LoginForm.dart';
@@ -37,10 +39,10 @@ class MyApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
       ],
-      supportedLocales: [
-        Locale('pt', 'BR'),
-        Locale('en', 'US'),
-      ],
+      // supportedLocales: [
+      //   Locale('pt', 'BR'),
+      //   Locale('en', 'US'),
+      // ],
       debugShowCheckedModeBanner: false,
       title: 'Login',
       theme: ThemeData(
