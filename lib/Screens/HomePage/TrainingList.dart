@@ -1,3 +1,5 @@
+// ignore_for_file: file_names, non_constant_identifier_names, prefer_const_constructors, sort_child_properties_last
+
 import 'package:app_maromba/Screens/Training/Abdomen.dart';
 import 'package:app_maromba/Screens/Training/Aerobico.dart';
 import 'package:app_maromba/Screens/Training/Braco.dart';

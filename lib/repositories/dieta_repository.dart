@@ -41,8 +41,8 @@ class DietaRepository {
 
   }
 
-  Future<bool> excluirDieta(Dieta dieta) async {
-    var parse = ParseObject('Dieta')..objectId = dieta.id;
+  Future<bool> excluirDieta(Dieta afazer) async {
+    var parse = ParseObject('Dieta')..objectId = afazer.id;
     final ParseResponse response = await parse.delete();
     if (response.success){
       return true;

@@ -1,5 +1,7 @@
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, sized_box_for_whitespace, camel_case_types, prefer_const_constructors_in_immutables, unnecessary_new, file_names
+
 import 'package:app_maromba/Screens/LoginAndRegister/EditProfileForm.dart';
-import 'package:app_maromba/Screens/HomePage/AvFisica.dart';
+import 'package:app_maromba/views/avaliacao_view/avaliacao_view.dart';
 import 'package:app_maromba/views/dieta_view.dart';
 import 'package:app_maromba/Screens/HomePage/TrainingList.dart';
 import 'package:flutter/material.dart';
@@ -248,7 +250,7 @@ class MyMenu_4 extends StatelessWidget {
       child: InkWell(
         onTap: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => AvFisica()));
+              context, MaterialPageRoute(builder: (context) => AvaliacaoPage()));
         },
         splashColor: Colors.purple,
         child: Center(

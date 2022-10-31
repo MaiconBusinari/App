@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:app_maromba/models/cadastro.dart';
 import 'package:app_maromba/repositories/cadastro_repository.dart';
 import 'package:mobx/mobx.dart';

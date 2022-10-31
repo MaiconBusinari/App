@@ -45,7 +45,7 @@ mixin _$DietaStore on _DietaStore, Store {
       AsyncAction('_DietaStore.carregandoDieta', context: context);
 
   @override
-  Future<void> carregandoDieta() {
+  Future<void> carregandoDietas() {
     return _$carregandoDietaAsyncAction.run(() => super.carregandoDieta());
   }
 

@@ -1,3 +1,5 @@
+// ignore_for_file: file_names, non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 
 class Peitoral extends StatefulWidget {
@@ -13,7 +15,7 @@ class _PeitoralState extends State<Peitoral> {
   Widget buildSingleCheckbox(CheckBoxState checkbox) =>  CheckboxListTile(
     value: checkbox.value,
     title: Text(checkbox.title,
-      style: TextStyle(color:
+      style: const TextStyle(color:
       Colors.deepPurple,
           fontWeight: FontWeight.bold
       ),),
@@ -58,19 +60,19 @@ final exercicios = [
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Treino de Peito'),
+        title: const Text('Treino de Peito'),
         centerTitle: true,
       ),
       body:
       ListView(
-        padding: EdgeInsets.all(10),
-        children: [  SizedBox(height: 8.0),
+        padding: const EdgeInsets.all(10),
+        children: [  const SizedBox(height: 8.0),
           Image.asset("assets/images/acad.png",
             height: 100.0,
             width: 100.0,
           ),
       buildGroupCheckbox(treinocompleto),
-      Divider(color: Colors.black),
+      const Divider(color: Colors.black),
       ...exercicios.map(buildSingleCheckbox).toList(),
 
         ],

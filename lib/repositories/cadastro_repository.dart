@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:mobx/mobx.dart';
 
 import 'package:app_maromba/models/cadastro.dart';

@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors, unused_import, file_names
+
 import 'package:app_maromba/Screens/LoginAndRegister/LoginForm.dart';
 import 'package:flutter/material.dart';
 
